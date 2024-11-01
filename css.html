@@ -20,6 +20,12 @@
 
         .inline-block{
             background-color: purple;
+            width: 200px;
+            height: 150px;
+        }
+
+        .inline-block2{
+            background-color: purple;
             width: 100px;
             height: 150px;
         }
@@ -48,8 +54,7 @@
             height: 300px; */
             border: 10px solid green;
             padding: 50px;
-            margin-top: 100px;
-            margin-left: 100px;
+            margin: 100px;
         }
 
         .father{
@@ -91,12 +96,12 @@
             background-color: blue;
             /* 相对定位: 相对于元素在文档流中的正常位置进行定位 */
             position: relative;
-            top: 50px;
-            left: 120px;
+            top: 30px;
+            left: 130px;
         }
 
         .box-absolute{
-            width: 100px;
+            width: 1000px;
             height: 100px;
             background-color: red;
             /* 绝对定位: 相对于距离最近的已定位父级元素或已定位的html元素进行定位，不占据文档流 */
@@ -110,8 +115,8 @@
             background-color: yellow;
             /* 固定定位: 相对于浏览器窗口进行定位，不随页面滚动而变化 */
             position: fixed;
-            top:200px;
-            right:0;
+            top:250px;
+            right:30px;
         }
 
     </style>
@@ -132,9 +137,9 @@
     <span class="inline">这是一个行内元素</span>
 
 
-    < img class="inline-block" src="https://www.w3school.com.cn/i/eg_smile.gif" alt="这是一个行内块元素" width="32" height="32">
-    < img class="inline-block" src="https://www.w3school.com.cn/i/eg_smile.gif" alt="这是一个行内块元素" width="32" height="32">
-    < img class="inline-block" src="https://www.w3school.com.cn/i/eg_smile.gif" alt="这是一个行内块元素" width="32" height="32">
+    <img class="inline-block" src="https://www.w3school.com.cn/i/eg_smile.gif" alt="这是一个行内块元素">
+    <img class="inline-block" src="" alt="这也是一个行内块元素">
+    <img class="inline-block2" src="https://www.w3school.com.cn/i/eg_smile.gif" alt="这是另一个行内块元素">
 
 
     <hr>
