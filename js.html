@@ -3,30 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JS</title>
 </head>
 <body>
 
+    <div id="box1">
+        这是一个ID选择器标签
+    </div>
+
+    <div class="box2">
+        这是一个类选择器标签
+    </div>
+
+    <div>
+        普通的div标签
+    </div>
+    
+    <button>按钮</button>
+
     <script>
 
-        // 弹窗
+        // 变量和常量，推荐使用 let 和 const
+        var a; // 打印a是undefined
+        let y = 5;
+        const PI = 3.14;
 
-        alert("Hello World!");
+        let name = "John";
 
-        var result = confirm('你听说过wz吗？');
-        console.log(result);
+        let empty_value = null; // 空值
 
-        var a = prompt('请随便输入点什么东西吧');
+        // undefined 和 null 区别
+        // undefined : 一个变量已被声明，但尚未被赋值；或一个对象属性不存在；或函数没有返回值值，返回类型也是undefined
+        // 表示变量可能在将来被赋值，或者表示某个值还没被计算出来
+        // null ：表示一个变量被明确赋值为空，或者不存在；是一个被赋予的值，表示一个空对象引用，或者没有对象值
+        // 明确地表示没有对象值
+
+        // 通过DOM API方法获取元素
+        // 唯一
+        var a = document.getElementById('box1');
         console.log(a);
+        // 获取到的是数组
+        var b1 = document.getElementsByClassName('box2');
+        var b2 = document.getElementsByClassName('box2')[0];
+        console.log(b1);
+        console.log(b2);
 
-        // 输出内容到页面上
-        document.write('千古前端图文教程');
-        
-        // 控制台打印的不同级别
-        console.log('千古壹号1'); //普通打印
-        console.warn('千古壹号2'); //警告打印
-        console.error('千古壹号3'); //错误打印
-    </script>
+        var c = document.getElementsByTagName('div')[2];
+        console.log(c);
+
+        // 更改
+        a.innerHTML = '<a href="#">百度</a>';
+        b2.innerText = '<a href="#">百度</a>';
+        c.style.color = 'red';
+
+        // 通过DOM属性绑定事件
+        var btn_element = document.getElementsByTagName('button')[0];
+
+        btn_element.onclick = function() {
+            alert('按钮被点击了');
+        }
+
+        // btn_element.addEventListener('click', function() {
+        //     alert('按钮被点击了');
+        // })
+    </script>  
 
 </body>
 </html>
